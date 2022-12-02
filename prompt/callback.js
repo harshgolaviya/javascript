@@ -39,33 +39,33 @@
 
 const prompt=require('prompt-sync')()
 
-let a=parseInt(prompt("Enter Number: "))
-let b=Array.from(String(a), Number);
+// let a=parseInt(prompt("Enter Number: "))
+// let b=Array.from(String(a), Number);
 
-let start=(b)=>
-{
-    let c=0
-    for(i=0;i<b.length;i++)
-    {
-       c=c+b[i]
-    }
-    console.log(c)
-    let d=Array.from(String(c), Number);
-    // console.log(d)
-    return check(d)
-}
-let check=(x)=>{
-    // console.log(typeof d)
-    if(x.length>=2)
-    {
-        start(x)
-    }
-}
-let find = (number, callback) => 
-{
-    return callback(number);
-}
-find(b,start)
+// let start=(b)=>
+// {
+//     let c=0
+//     for(i=0;i<b.length;i++)
+//     {
+//        c=c+b[i]
+//     }
+//     console.log(c)
+//     let d=Array.from(String(c), Number);
+//     // console.log(d)
+//     return check(d)
+// }
+// let check=(x)=>{
+//     // console.log(typeof d)
+//     if(x.length>=2)
+//     {
+//         start(x)
+//     }
+// }
+// let find = (number, callback) => 
+// {
+//     return callback(number);
+// }
+// find(b,start)
 
 
 
@@ -99,7 +99,6 @@ find(b,start)
 
 // let number = 123456;
 // console.log(total(number, sum));
-
 
 
 
