@@ -1,98 +1,97 @@
 
-let stocks = {
-    Fruits : ["strawberry", "grapes", "banana", "apple"],
-    liquid : ["water", "ice"],
-    holder : ["cone", "cup", "stick"],
-    toppings : ["chocolate", "peanuts"],
- };
+// let stocks = {
+//     Fruits : ["strawberry", "grapes", "banana", "apple"],
+//     liquid : ["water", "ice"],
+//     holder : ["cone", "cup", "stick"],
+//     toppings : ["chocolate", "peanuts"],
+//  };
 
-let is_shop_open=true
-let order = ( time, work ) => {
+// let is_shop_open=true
+// let order = ( time, work ) => {
 
-    return new Promise( ( resolve, reject )=>{
-      if( is_shop_open ){
-        setTimeout(()=>{
-          resolve( work() )
-         }, time)
-      }
-      else{
-        reject( console.log("Our shop is closed") )
-      }
-    })
-  }
-
- order(2000,()=>{console.log(`${stocks.Fruits[0]} was selected..`);})
-
-.then(()=>
-{
-    return order(2000,()=>{console.log(`production was selected..`);})
-})
-
- .then(()=>
-{
-  return order(1000, ()=>console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} added`))
-})
-
-.then(()=>
-{
-  return order(1000, ()=>console.log("start the machine"))
-})
-
-.then(()=>
-{
-  return order(2000, ()=>console.log(`ice cream placed on ${stocks.holder[1]}`))
-})
-
-.then(()=>
-{
-  return order(3000, ()=>console.log(`${stocks.toppings[0]} as toppings`))
-})
-
-.then(()=>
-{
-  return order(2000, ()=>console.log("Serve Ice Cream"))
-}) 
-
-.catch(()=>{
-    console.log("Customer left")
-  })
-
-
-
-// const prompt=require('prompt-sync')()
-// let a=parseInt(prompt("Enter Number: "))
-// let b=Array.from(String(a), Number);
-
-// let start=(b)=>
-// {
-//     let c=0
-//     for(i=0;i<b.length;i++)
-//     {
-//        c=c+b[i]
-//     }
-//     console.log(c)
-//     let d=Array.from(String(c), Number);
-//     return check(d)
-// }
-// let check=(x)=>{
-//     if(x.length>=2)
-//     {
-//         start(x)
-//     }
-// }
-// let find = (number, sum) => 
-// {
-//     new Promise((resolve,reject)=>{
-//         if(number==number)
-//         {
-//             resolve(sum(number))
-//         }
-//         else{
-//             reject(console.log('Not founded!!!'))
-//         }
+//     return new Promise( ( resolve, reject )=>{
+//       if( is_shop_open ){
+//         setTimeout(()=>{
+//           resolve( work() )
+//          }, time)
+//       }
+//       else{
+//         reject( console.log("Our shop is closed") )
+//       }
 //     })
-// }
-// find(b,start)
+//   }
+
+//  order(2000,()=>{console.log(`${stocks.Fruits[0]} was selected..`);})
+
+// .then(()=>
+// {
+//     return order(2000,()=>{console.log(`production was selected..`);})
+// })
+
+//  .then(()=>
+// {
+//   return order(1000, ()=>console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} added`))
+// })
+
+// .then(()=>
+// {
+//   return order(1000, ()=>console.log("start the machine"))
+// })
+
+// .then(()=>
+// {
+//   return order(2000, ()=>console.log(`ice cream placed on ${stocks.holder[1]}`))
+// })
+
+// .then(()=>
+// {
+//   return order(3000, ()=>console.log(`${stocks.toppings[0]} as toppings`))
+// })
+
+// .then(()=>
+// {
+//   return order(2000, ()=>console.log("Serve Ice Cream"))
+// }) 
+
+// .catch(()=>{
+//     console.log("Customer left")
+//   })
+
+
+
+const prompt=require('prompt-sync')()
+
+let b=Array.from(String(parseInt(prompt("Enter Number: "))), Number);
+let a1=[9]
+
+let start=(b)=>
+{
+    let c=0
+    for(i=0;i<b.length;i++)
+    {
+       c=c+b[i]
+    }
+    console.log(c)
+    let d=Array.from(String(c), Number);
+    if(c>9)
+    {
+        start(d)
+    }
+}
+let find = (number, sum) => 
+{
+    new Promise((resolve,reject)=>{
+        if(number>=a1)
+        {
+            resolve(sum(number))
+        }
+        else{
+            reject(console.log('Not founded!!!'))
+        }
+    })
+}
+find(b,start)
+
 
 
 

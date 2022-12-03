@@ -1,3 +1,5 @@
+const prompt=require('prompt-sync')()
+
 // let stocks = {
 //     Fruits : ["strawberry", "grapes", "banana", "apple"],
 //     liquid : ["water", "ice"],
@@ -37,35 +39,75 @@
 // }
 // order(0,production)
 
-const prompt=require('prompt-sync')()
 
-// let a=parseInt(prompt("Enter Number: "))
-// let b=Array.from(String(a), Number);
 
-// let start=(b)=>
-// {
-//     let c=0
-//     for(i=0;i<b.length;i++)
-//     {
-//        c=c+b[i]
+
+// let add=(num,callback)=>{
+//     return callback(num+10,false)
+// }
+// let sub=(num,callback)=>{
+//     return callback(num-5,true)
+// }
+// let mul=(num,callback)=>{
+//     return callback(num*2,false)
+// }
+// let div=(num,callback)=>{
+//     return callback(num/3,false)
+// }
+
+// add(10,(address,error)=>{
+//     if(!error){
+//         sub(address,(subt,error)=>{
+//             if(!error){
+//                 mul(subt,(multi,error)=>{
+//                     if(!error){ 
+//                         div(multi,(divt,error)=>{
+//                             if(!error){
+//                                 console.log(divt);
+//                             }
+//                         })
+//                     }
+//                 })
+//             }
+//             else{
+//                 console.log('Sorry');
+//             }
+//         })
 //     }
-//     console.log(c)
-//     let d=Array.from(String(c), Number);
-//     // console.log(d)
-//     return check(d)
-// }
-// let check=(x)=>{
-//     // console.log(typeof d)
-//     if(x.length>=2)
-//     {
-//         start(x)
+//     else{
+//         console.log('Sorry!!');
 //     }
-// }
-// let find = (number, callback) => 
-// {
-//     return callback(number);
-// }
-// find(b,start)
+// })
+
+
+
+let a=parseInt(prompt("Enter Number: "))
+let b=Array.from(String(a), Number);
+
+let start=(b)=>
+{
+    let c=0
+    for(i=0;i<b.length;i++)
+    {
+       c=c+b[i]
+    }
+    console.log(c)
+    let d=Array.from(String(c), Number);
+    // console.log(d)
+    return check(d)
+}
+let check=(x)=>{
+    // console.log(typeof d)
+    if(x.length>=2)
+    {
+        start(x)
+    }
+}
+let find = (number, callback) => 
+{
+    return callback(number);
+}
+find(b,start)
 
 
 
