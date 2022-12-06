@@ -228,3 +228,64 @@
 // c
 // d
 // e
+
+
+// 6/12/2022 
+
+// map :-
+// The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+// const numbers = [1, 2, 3, 4];
+// const doubled = numbers.map(item => item * 2,1);
+// console.log(doubled)
+
+
+// Filter :-
+// The filter() method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+
+// console.log(
+//     [1, 2, 3, 4, 5].filter((element,index) => {
+//         return element >= 3;
+//     })
+// ); //[ 3, 4, 5 ]
+
+
+// const numbers = [1,2,3,4];
+// const evens = numbers.filter(item => item % 2 === 0);
+// console.log(evens);                  // [ 2, 4 ]
+
+
+// const students = [
+//     { name: 'Quincy',grade: 96 },
+//     { name: 'Jason',grade: 84 },
+//     { name: 'Alexis',grade: 100 },
+//     { name: 'Sam',grade: 65 },
+//     { name: 'Katie',grade: 90 }
+//   ];
+//   const studentGrades = students.filter(student => student.grade >= 90);
+//   console.log( studentGrades); 
+// [
+//     { name: 'Quincy', grade: 96 },
+//     { name: 'Alexis', grade: 100 },
+//     { name: 'Katie', grade: 90 }
+// ]
+
+
+
+// let a=[1,2,3,4,5]
+// console.log(a.map((element) => {
+//         return element * 100;
+//     }).filter((element) => {
+//         return element >= 300;
+//     })
+// );     [ 300, 400, 500 ]
+
+
+// Reduce :-
+// console.log(
+//     [1, 2, 3, 4, 5].reduce((firstElement, nextElement,index) => {
+//         console.log(firstElement +" - " + nextElement," ",index)
+//         return firstElement + nextElement;
+//     },10)
+// );
+// reduce((accumulator, currentValue, currentIndex, array) => { /* … */ }, initialValue)
